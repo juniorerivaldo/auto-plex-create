@@ -8,7 +8,7 @@ Auto-Plex is a command-line tool (CLI) that enables users to swiftly generate th
 ## Installation
 
 ```
-1. npm i auto-plex-create
+1. npm i auto-plex-create -g
 
 ```
 
@@ -29,22 +29,27 @@ The project structure created by Auto-Plex will look like this:
 
 ```
 Auto-Plex/
-  ├── src/
-  │   ├── @types/
-  │   │   └── express/
-  │   │       └── index.d.ts
-  │   ├── controllers/
-  │   ├── helpers/
-  │   ├── integrations/
-  │   ├── middlewares/
-  │   │   └── isAuthenticated.ts
-  │   ├── services/
-  │   └── server.ts
-  ├── prisma/
-  │   └── index.ts
-  ├── .gitignore
-  ├── package.json
-  └── tsconfig.json
+  ├── client/      
+  ├── server/
+  │   ├── src/
+  │   │   ├── prisma/  
+  │   │   │   └── index.ts
+  │   │   ├── @types/ 
+  │   │   │   └── express/
+  │   │   │       └── index.d.ts
+  │   │   ├── controllers/  
+  │   │   ├── helpers/       
+  │   │   ├── integrations/  
+  │   │   ├── middlewares/   
+  │   │   │   └── isAuthenticated.ts
+  │   │   ├── services/      
+  │   │   ├── routes.ts      
+  │   │   └── server.ts      
+  │   ├── .gitignore        
+  │   ├── package.json     
+  │   └── tsconfig.json      
+  └── README.md             
+
   
 ```
 

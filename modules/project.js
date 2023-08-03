@@ -26,6 +26,14 @@ export async function createProject(projectName) {
   fs.ensureDirSync(srcDir);
   npmlog.info("create", 'Folder "src" created');
 
+  // Create README.md
+  const readmeContent = `
+# ${projectName}
+
+Description of project.
+`;
+  fs.writeFileSync(`${projectName}/README.md`, readmeContent);
+
   // Create Folders inside 'src'
   const Folders = ["middlewares", "controllers", "services", "integrations", "helpers", "@types/express"];
   Folders.forEach((Folder) => {
@@ -154,4 +162,3 @@ app.listen(3333, () => {
 
   npmlog.info("create", `Project "${projectName}" Started!`);
 }
-
