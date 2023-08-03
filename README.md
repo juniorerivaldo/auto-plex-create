@@ -8,7 +8,7 @@ Auto-Plex is a command-line tool (CLI) that enables users to swiftly generate th
 ## Installation
 
 ```
-1. 
+1. npm i auto-plex-create
 
 ```
 
