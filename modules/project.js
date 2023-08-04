@@ -35,7 +35,7 @@ Description of project.
   fs.writeFileSync(`${projectName}/README.md`, readmeContent);
 
   // Create Folders inside 'src'
-  const Folders = ["middlewares", "controllers", "services", "integrations", "helpers", "@types/express"];
+  const Folders = ["middlewares", "controllers", "services", "integrations","views", "helpers", "@types/express"];
   Folders.forEach((Folder) => {
     fs.ensureDirSync(`${srcDir}/${Folder}`);
     npmlog.info("create", `Folder "${Folder}" created inside "src"`);
