@@ -3,7 +3,8 @@
   "version": "0.0.5",
   "description": "Auto-Plex project is a command-line tool (CLI) that enables users to swiftly generate the fundamental structure for starting Node.js projects, simplifying the development of applications and APIs using TypeScript, Express.js, and Prisma ORM. With the aid of Cwc-Scaffold, developers can save time and effort in the initial project setup, obtaining a solid foundation to kickstart their applications.",
   "bin": {
-    "auto-plex-create": "bin/auto-plex-create.js"
+    "auto-plex-create": "bin/auto-plex-create.js",
+    "local_test":"bin/auto-plex-create.js"
   },
   "type": "module",
   "repository": {

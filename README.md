@@ -39,11 +39,13 @@ Auto-Plex/
   │   │   │       └── index.d.ts
   │   │   ├── controllers/  
   │   │   ├── helpers/       
-  │   │   ├── integrations/  
+  │   │   ├── integrations/ 
+  │   │   │       └── index.d.ts 
   │   │   ├── middlewares/   
   │   │   │   └── isAuthenticated.ts
   │   │   ├── services/      
-  │   │   ├── routes.ts      
+  │   │   ├── routes.ts  
+  │   │   ├── .env     
   │   │   └── server.ts      
   │   ├── .gitignore        
   │   ├── package.json     
