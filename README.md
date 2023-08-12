@@ -40,7 +40,7 @@ Auto-Plex/
   │   │   ├── controllers/  
   │   │   ├── helpers/       
   │   │   ├── integrations/ 
-  │   │   │       └── index.d.ts 
+  │   │   │       └── emailSender.ts 
   │   │   ├── middlewares/   
   │   │   │   └── isAuthenticated.ts
   │   │   ├── services/      

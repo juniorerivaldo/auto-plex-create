@@ -11,15 +11,12 @@ export async function createProject(projectName) {
   fs.ensureDirSync(projectDir);
   npmlog.info("create", `Project Folder "${projectName}" created`);
 
+  //back-end start
+
   // Create the 'server' Folder in the project
   const serverDir = `${projectDir}/server`;
   fs.ensureDirSync(serverDir);
   npmlog.info("create", 'Folder "server" created');
-
-  // Create the 'client' Folder in the project
-  const clientDir = `${projectDir}/client`;
-  fs.ensureDirSync(clientDir);
-  npmlog.info("create", 'Folder "client" created');
 
   // Create Folder 'src' in the project
   const srcDir = `${serverDir}/src`;
@@ -83,12 +80,14 @@ export function isAuthenticated(request: Request, response: Response, next: Next
     description: "Project description",
     scripts: {
       dev: "ts-node-dev --transpile-only src/server.ts",
+      "auto-plex-route": "node src/helpers/createRoutes.ts",
     },
     devDependencies: {
       "@types/bcryptjs": "^2.4.2",
       "@types/cors": "^2.8.13",
       "@types/express": "^4.17.17",
       "@types/jsonwebtoken": "^9.0.2",
+      inquirer: "^9.2.9",
       "ts-node-dev": "^2.0.0",
       typescript: "^4.3.5",
     },
@@ -114,7 +113,7 @@ import { isAuthenticated } from "./middlewares/isAuthenticated";
 
 const router = Router();
 
-// Define your routes here... Or user cwc package to automate this tasks :)
+// Define your routes here... Or user auto-plex-routes package to automate this tasks :)
 
 export { router };
 `;
@@ -160,5 +159,12 @@ app.listen(3333, () => {
   fs.writeFileSync(`${projectDir}/.gitignore`, gitignoreContent);
   npmlog.info("create", 'File ".gitignore" created');
 
-  npmlog.info("create", `Project "${projectName}" Started!`);
+  npmlog.info("create", `Project "${projectName}" Back-end Started!`);
+
+  //front-end start
+
+  // Create the 'client' Folder in the project
+  const clientDir = `${projectDir}/client`;
+  fs.ensureDirSync(clientDir);
+  npmlog.info("create", 'Folder "client" created');
 }
